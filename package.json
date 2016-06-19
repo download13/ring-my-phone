@@ -1,0 +1,27 @@
+{
+	"name": "@download/ring-my-phone",
+	"version": "0.0.1",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^5.0.0-alpha.2",
+		"twilio": "^3.3.0-edge",
+		"body-parser": "1.15.1"
+	},
+	"engines": {
+		"node": "4.4.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"license": "MIT"
+}
