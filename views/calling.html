@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ring My Phone</title>
+    <link rel="icon" href="https://cdn.hyperdev.com/us-east-1%3A99577ed8-8cc1-464c-9b23-fbd40162e022%2Fnotification.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      .calling {
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+      }
+      #calling {
+        align-self: center;
+      }
+      #inv {
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="calling"><span id="calling">Calling</span><span id="ellipses"></span><span id="inv"></span></h1>
+    <script>
+      var ellipses = document.getElementById('ellipses');
+      var inv = document.getElementById('inv');
+      var count = 0;
+      setInterval(function() {
+        count++;
+        refreshDots();
+      }, 400);
+      refreshDots();
+
+      function refreshDots() {
+        var dotGroups = dots(count % 4, 4);
+        ellipses.textContent = dotGroups[0];
+        inv.textContent = dotGroups[1];
+      }
+
+      function dots(count, outOf) {
+        var r1 = '';
+        var r2 = '';
+        for(var i = 0; i < outOf; i++) {
+          if(i < count) r1 += '.';
+          else r2 += '.';
+        }
+        return [r1, r2];
+      }
+    </script>
+  </body>
+</html>

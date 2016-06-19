@@ -1,50 +1,76 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 25px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #CCF1FF;
 }
 
-h1 {
-  font-weight: bold;
-  color: pink;
+header {
+  flex: 0 0 auto;
+}
+
+#sitetitle {
+  text-align: center;
+  font-size: 4em;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: cyan;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 3px;
+  display: flex;
+  margin: 100px 50px;
 }
 
-input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
+.form-input {
+  padding: 5px 7px;
+  flex: 1 1 auto;
+  font-size: 2em;
+  border-radius: 6px 0 0 6px;
+  border: 3px solid #216677;
 }
 
-button {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: lightgrey;
-  border: 1px solid grey;
-  box-shadow: 2px 2px teal;
+.form-button {
+  padding: 5px 7px;
+  flex: 0 0 auto;
+  font-size: 2em;
+  border-radius: 0 6px 6px 0;
+  border: 3px solid #216677;
+  border-left: 0;
   cursor: pointer;
+  background-color: #A0EDFF;
 }
 
-button:hover {
-  background-color: yellow;
+.form-button:hover {
+  background-color: #C6F4FF;
 }
 
-button:active {
-  box-shadow: none;
+
+footer {
+  flex: 0 0 auto;
+  margin-top: auto;
+  text-align: center;
+  background-color: #C0CDF9;
+  padding: 18px 0;
+}
+
+
+@media (max-width: 600px) {
+  #sitetitle {
+    font-size: 2em;
+  }
+  .form-input {
+    border-width: 2px;
+    width: 60%;
+    font-size: 1em;
+  }
+  .form-button {
+    font-size: 1em;
+  }
 }
